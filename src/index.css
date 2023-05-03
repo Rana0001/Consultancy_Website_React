@@ -1,3 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    background: '#e5e5e5' !important;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+  }
+  
+
+  
+  .searchBox {
+    background-color: #24759f;
+    border: none;
+  }
+  
+  .searchBox:focus {
+    outline: none;
+  }
+  
+  input, select, textarea{
+    color: whitesmoke;
+    font-size: 1rem;
+  }
+  
+  textarea:focus, input:focus {
+    color: whitesmoke;
+  }
+  
+  .searchBox::placeholder {
+    color: whitesmoke;
+    font-size: 1rem;
+  }
+  
+  .searchBar {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    position: absolute;
+    top: 15px;
+    right: 15vw;
+  }
+  
+  .searchOptions {
+    width: 24vw;
+    min-width: 20vw;
+    padding: 10px;
+    background-color: #24759f;
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .navButton {
+    width: 50%;
+    font-size: large;
+    font-weight: 600;
+    background-color: #24759f;
+    color: whitesmoke;
+    border: none;
+    padding: 15px 0;
+    cursor: pointer;
+  }
+  
+  .navButton:focus {
+    border-bottom: 0.5px solid #0e4763;
+    background-image: linear-gradient(#0e4763, #1e6082);
+  }
+  
+  @media (max-width: 800px) {
+    .topBarText {
+      display: none;
+    }
+    .topBar img {
+      padding-right: 50vw;
+    }
+  
+    .searchBar {
+      right: 5vw;
+    }
+  
+    .searchOptions {
+      width: 100%;
+    }
+  }
